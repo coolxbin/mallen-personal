@@ -5,21 +5,21 @@ import javax.annotation.Resource;
 import com.huangzb.test.business.IUserService;
 import com.opensymphony.xwork2.ActionSupport;
 /**
- * struts2ÐèÒªConvention plug-inÀ´Ö§³Ö×¢½â£¬¸Ã²å¼þµÄÊ¹ÓÃ¹æÔòÈçÏÂ£º
- * 1¡¢²å¼þÄ¬ÈÏ½«»á°Ñstrut¡¢struts2¡¢action»òÕßactionsµÄ°üÂ·¾¢ÏÂËùÓÐÀà´¦Àí³Écontroller(action)£¬
- * 	°üÂ·¾¢Èç
+ * struts2éœ€è¦Convention plug-inæ¥æ”¯æŒæ³¨è§£ï¼Œè¯¥æ’ä»¶çš„ä½¿ç”¨è§„åˆ™å¦‚ä¸‹ï¼š
+ * 1ã€æ’ä»¶é»˜è®¤å°†ä¼šæŠŠstrutã€struts2ã€actionæˆ–è€…actionsçš„åŒ…è·¯åŠ²ä¸‹æ‰€æœ‰ç±»å¤„ç†æˆcontroller(action)ï¼Œ
+ * 	åŒ…è·¯åŠ²å¦‚
  * 	com.test.action.HelloWorld.class
  *  com.test.action.hello.HelloWorld.class
- *  ÕâÁ½ÖÖ·½Ê½Éú³ÉµÄactionÃû×Ö¶¼ÊÇhello-world£¬µ«ÊÇÊôÓÚ²»Í¬µÄnamespace£¬µÚÒ»¸öÊôÓÚdefault namespace£¬µÚ¶þ¸öÊôÓÚhello namespace.
- *  ÓÉ´Ë¿ÉÖª£¬²å¼þÔÚÊ¶±ðÁË¹Ø¼ü×ÖÖ®ºó£¬ÆäºóµÄ°üÂ·¾¢»á±»´¦Àí³É±í¿Õ¼ä£¬¶ÔÓ¦ÓÚurlÀàËÆÓÚ/hello/hello-world
- * 2¡¢action class±ØÐëÂú×ãÒÔÏÂÁ½¸öÌõ¼þÖÐµÄÒ»¸ö£º
- *	1.ÊµÏÖcom.opensymphony.xwork2.Action
- * 	2.ÀàÃûÒÔAction½áÎ²
- * 3¡¢²å¼þÊ¹ÓÃÀàÃûÀ´Ó³Éä³öactionµÄURL£¬±ÈÈçWelcomeUser->welcome-user£¬WelcomeMyDear->welcome-my-dear
- * 4¡¢¶ÔÓÚ·µ»Ø½á¹û£¬²å¼þ»áÔÚÄ¬ÈÏÄ¿Â¼WEB-INF/contentÄ¿Â¼ÖÐÈ¥²éÕÒ·µ»ØÒ³Ãæ
- * 5¡¢²å¼þ×îºó»á¸ù¾Ý·µ»Ø½á¹ûÀ´Ñ°ÕÒÒ³Ãæ£¬±ÈÈçwelcome-user·µ»ØµÄÊÇsuccess¡£Ôò»áÔÚÄ¬ÈÏÄ¿Â¼ÖÐÑ°ÕÒwelcome-user-success.jsp»òÕßwelcome-user.jsp£»
- * Èç¹û·µ»Ø½á¹ûÊÇinput£¬Ôò»áÑ°ÕÒwelcome-user-input.jsp£¬µ±È»£¬·µ»ØÒ³Ãæ²»ÏÞÓÚjspÒ³Ãæ£¬ÔÚ´Ë½ö½öÊÇÎªÁËËµÃ÷·µ»ØÒ³ÃæµÄÃû³Æ¡£
- * 6¡¢¿ÉÒÔÀûÓÃstruts2µÄ×¢½âÀ´¸Ä±äÃüÃû¿Õ¼ä£¬actionÃû³Æ£¬·µ»Ø½á¹ûµÈÊý¾Ý¡£
+ *  è¿™ä¸¤ç§æ–¹å¼ç”Ÿæˆçš„actionåå­—éƒ½æ˜¯hello-worldï¼Œä½†æ˜¯å±žäºŽä¸åŒçš„namespaceï¼Œç¬¬ä¸€ä¸ªå±žäºŽdefault namespaceï¼Œç¬¬äºŒä¸ªå±žäºŽhello namespace.
+ *  ç”±æ­¤å¯çŸ¥ï¼Œæ’ä»¶åœ¨è¯†åˆ«äº†å…³é”®å­—ä¹‹åŽï¼Œå…¶åŽçš„åŒ…è·¯åŠ²ä¼šè¢«å¤„ç†æˆè¡¨ç©ºé—´ï¼Œå¯¹åº”äºŽurlç±»ä¼¼äºŽ/hello/hello-world
+ * 2ã€action classå¿…é¡»æ»¡è¶³ä»¥ä¸‹ä¸¤ä¸ªæ¡ä»¶ä¸­çš„ä¸€ä¸ªï¼š
+ *	1.å®žçŽ°com.opensymphony.xwork2.Action
+ * 	2.ç±»åä»¥Actionç»“å°¾
+ * 3ã€æ’ä»¶ä½¿ç”¨ç±»åæ¥æ˜ å°„å‡ºactionçš„URLï¼Œæ¯”å¦‚WelcomeUser->welcome-userï¼ŒWelcomeMyDear->welcome-my-dear
+ * 4ã€å¯¹äºŽè¿”å›žç»“æžœï¼Œæ’ä»¶ä¼šåœ¨é»˜è®¤ç›®å½•WEB-INF/contentç›®å½•ä¸­åŽ»æŸ¥æ‰¾è¿”å›žé¡µé¢
+ * 5ã€æ’ä»¶æœ€åŽä¼šæ ¹æ®è¿”å›žç»“æžœæ¥å¯»æ‰¾é¡µé¢ï¼Œæ¯”å¦‚welcome-userè¿”å›žçš„æ˜¯successã€‚åˆ™ä¼šåœ¨é»˜è®¤ç›®å½•ä¸­å¯»æ‰¾welcome-user-success.jspæˆ–è€…welcome-user.jspï¼›
+ * å¦‚æžœè¿”å›žç»“æžœæ˜¯inputï¼Œåˆ™ä¼šå¯»æ‰¾welcome-user-input.jspï¼Œå½“ç„¶ï¼Œè¿”å›žé¡µé¢ä¸é™äºŽjspé¡µé¢ï¼Œåœ¨æ­¤ä»…ä»…æ˜¯ä¸ºäº†è¯´æ˜Žè¿”å›žé¡µé¢çš„åç§°ã€‚
+ * 6ã€å¯ä»¥åˆ©ç”¨struts2çš„æ³¨è§£æ¥æ”¹å˜å‘½åç©ºé—´ï¼Œactionåç§°ï¼Œè¿”å›žç»“æžœç­‰æ•°æ®ã€‚
  * @author Administrator
  *
  */
