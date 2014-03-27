@@ -1,5 +1,7 @@
 package com.huangzb.test.beancoper;
 
+import java.util.Date;
+
 import com.huangzb.test.bean.SourceBean;
 import com.huangzb.test.bean.SourceInnerBean;
 import com.huangzb.test.bean.TargetBean;
@@ -11,6 +13,7 @@ public class CopyBean {
 		BeanCopier coper = BeanCopier.create(SourceBean.class, TargetBean.class, false);
 		
 		SourceBean source = new SourceBean("sourceName", 10);
+		source.setCreateTime(new Date());
 		SourceInnerBean sib = new SourceInnerBean();
 		sib.setAge(1);
 		sib.setName("sib");
