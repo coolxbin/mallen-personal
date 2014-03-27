@@ -15,6 +15,7 @@
 		<module>mallen-log4j-commonlogging</module>
 		<module>mallen-beancopy</module>
 		<module>mallen-jpa-hibernate-jta</module>
+		<module>mallen-hql</module>
 	</modules>
 	<properties>
 		<struts2.version>2.3.16</struts2.version>

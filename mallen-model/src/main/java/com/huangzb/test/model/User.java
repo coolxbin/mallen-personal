@@ -1,8 +1,10 @@
 package com.huangzb.test.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -13,6 +15,17 @@ public class User {
 	@GenericGenerator(name="system-uuid", strategy = "uuid")// hibernate实现的jpa方式uuid生成策略
 	private String id;
 	private String name;
+	@ManyToOne(fetch=FetchType.LAZY)
+	private Company company;
+
+	public User() {
+		super();
+	}
+
+	public User(String name) {
+		super();
+		this.name = name;
+	}
 
 	public String getId() {
 		return id;
@@ -28,6 +41,14 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Company getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
 	}
 
 }
