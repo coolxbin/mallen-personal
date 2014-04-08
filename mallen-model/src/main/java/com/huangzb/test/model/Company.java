@@ -1,5 +1,6 @@
 package com.huangzb.test.model;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,10 +20,20 @@ public class Company {
 	@GenericGenerator(name = "system-uuid", strategy = "uuid")
 	private String id;
 	private String name;
-	@OneToMany(mappedBy="company", fetch=FetchType.LAZY, cascade={
-			CascadeType.PERSIST, CascadeType.MERGE
-	})
+	@OneToMany(mappedBy = "company", fetch = FetchType.LAZY, cascade = {
+			CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH,
+			CascadeType.REMOVE })
 	private List<User> users;
+	private Timestamp createTime;
+
+	public Company() {
+		super();
+	}
+
+	public Company(String name) {
+		super();
+		this.name = name;
+	}
 
 	public String getId() {
 		return id;
@@ -41,11 +52,23 @@ public class Company {
 	}
 
 	public List<User> getUsers() {
-		if(null == users){
+		if (null == users) {
 			users = new ArrayList<>();
 		}
-		
+
 		return users;
+	}
+
+	public void setUsers(List<User> users) {
+		this.users = users;
+	}
+
+	public Timestamp getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Timestamp createTime) {
+		this.createTime = createTime;
 	}
 
 }

@@ -1,13 +1,13 @@
 package com.huangzb.test.bean;
 
-import java.util.Date;
+import java.io.File;
 
 public class SourceBean {
 	private String name;
 	private int age;
 	private String sex;
-	private SourceInnerBean innerBean;
-	private Date createTime;
+	private String createTime;
+	private File file;
 
 	public SourceBean(String name, int age) {
 		super();
@@ -39,30 +39,39 @@ public class SourceBean {
 		this.sex = sex;
 	}
 
-	public SourceInnerBean getInnerBean() {
-		return innerBean;
-	}
+	// 这儿是不能定义返回值为String的，因为target中的是date，copier不会来调用该方法
+	// public String getCreateTime() {
+	// return DateUtil.dateTimeToStr(createTime);
+	// }
 
-	public void setInnerBean(SourceInnerBean innerBean) {
-		this.innerBean = innerBean;
-	}
-// 这儿是不能定义返回值为String的，因为target中的是date，copier不会来调用该方法
-//	public String getCreateTime() {
-//		return  DateUtil.dateTimeToStr(createTime);
-//	}
-	
-	public Date getCreateTime() {
-		return createTime;
-	}
-	
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+	// public Date getCreateTime() {
+	// return createTime;
+	// }
+	//
+	// public void setCreateTime(Date createTime) {
+	// this.createTime = createTime;
+	// }
 
 	@Override
 	public String toString() {
 		return "SourceBean:name = " + name + ", age = " + age + ", sex = "
 				+ sex;
+	}
+
+	public String getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(String createTime) {
+		this.createTime = createTime;
+	}
+
+	public File getFile() {
+		return file;
+	}
+
+	public void setFile(File file) {
+		this.file = file;
 	}
 
 }

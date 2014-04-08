@@ -1,16 +1,14 @@
 package com.huangzb.test.bean;
 
+import java.io.File;
 import java.util.Date;
-
-import com.huangzb.test.beancoper.DateUtil;
 
 public class TargetBean {
 	private String name;
 	private int age;
 	private String address;
-	private TargetInnerBean innerBean;
-	private SourceInnerBean sib;
 	private Date createTime;
+	private File file;
 
 	public Date getCreateTime() {
 		return createTime;
@@ -19,15 +17,10 @@ public class TargetBean {
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
-	
-	public void setCreateTime(String createTime) {
-		this.createTime = DateUtil.strToDateTime(createTime);
-	}
 
 	public String toString() {
 		return "TargetBean:name = " + name + ", age = " + age + ", address = "
-				+ address + ", innerBean = " + innerBean + ", sib = " + sib
-				+ " createTime=" + createTime;
+				+ address + " createTime=" + createTime + " filename = " + file.getName();
 	}
 
 	public TargetBean() {
@@ -64,11 +57,11 @@ public class TargetBean {
 		this.address = address;
 	}
 
-	public TargetInnerBean getInnerBean() {
-		return innerBean;
+	public File getFile() {
+		return file;
 	}
 
-	public void setInnerBean(TargetInnerBean innerBean) {
-		this.innerBean = innerBean;
+	public void setFile(File file) {
+		this.file = file;
 	}
 }
