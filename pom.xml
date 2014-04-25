@@ -17,6 +17,8 @@
 		<module>mallen-jpa-hibernate-jta</module>
 		<module>mallen-hql</module>
 		<module>mallen-xml</module>
+		<module>mallen-JquerySendObject</module>
+		<module>mallen-jdk8newfeature</module>
 	</modules>
 	<properties>
 		<struts2.version>2.3.16</struts2.version>
@@ -34,6 +36,7 @@
 		<dom4j.version>1.6.1</dom4j.version>
 		<!-- BTM -->
 		<btm.version>2.1.4</btm.version>
+		<jackson.version>1.9.13</jackson.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -194,6 +197,17 @@
 				<groupId>dom4j</groupId>
 				<artifactId>dom4j</artifactId>
 				<version>${dom4j.version}</version>
+			</dependency>
+			<!-- jackson -->
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-core-asl</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-mapper-asl</artifactId>
+				<version>${jackson.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
