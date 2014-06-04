@@ -19,6 +19,7 @@
 		<module>mallen-xml</module>
 		<module>mallen-JquerySendObject</module>
 		<module>mallen-jdk8newfeature</module>
+		<module>mallen-transChinese2En</module>
 	</modules>
 	<properties>
 		<struts2.version>2.3.16</struts2.version>
@@ -37,6 +38,7 @@
 		<!-- BTM -->
 		<btm.version>2.1.4</btm.version>
 		<jackson.version>1.9.13</jackson.version>
+		<pinyin4j.version>2.5.0</pinyin4j.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -208,6 +210,12 @@
 				<groupId>org.codehaus.jackson</groupId>
 				<artifactId>jackson-mapper-asl</artifactId>
 				<version>${jackson.version}</version>
+			</dependency>
+			<!-- pinyin4j -->
+			<dependency>
+				<groupId>com.belerweb</groupId>
+				<artifactId>pinyin4j</artifactId>
+				<version>${pinyin4j.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
