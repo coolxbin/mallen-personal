@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.huangzb.test.hibernate.model">
+
+	<class name="Contact" table="t_contact">
+		<id name="id" column="id">
+			<generator class="uuid2" />
+		</id>
+		
+		<!-- 该字段必须在属性之前定义 -->
+		<discriminator column="type" type="string" not-null="true"/>
+		
+		<property name="value" type="string" column="value" />
+		<many-to-one name="user" column="userId"/>
+		
+		<subclass name="Phone" discriminator-value="phone"></subclass>
+		<subclass name="Email" discriminator-value="email"></subclass>
+	</class>
+	
+</hibernate-mapping>
