@@ -33,7 +33,6 @@
 		<property name="packagesToScan">
 			<array>
 				<!-- 自动扫描model的类路劲 -->
-				<value>com.huangzb.test.model</value>
 				<value>com.huangzb.test.jpa.model</value>
 			</array>
 		</property>

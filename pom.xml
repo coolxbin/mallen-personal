@@ -21,6 +21,7 @@
 		<module>mallen-jdk8newfeature</module>
 		<module>mallen-transChinese2En</module>
 		<module>mallen-hibernate</module>
+		<module>mallen-jpa</module>
 	</modules>
 	<properties>
 		<struts2.version>2.3.16</struts2.version>

@@ -13,7 +13,7 @@ public class JpaAndJdbcTest extends AbstractTestCase{
 	private IUserService userService;
 	
 	/**
-	 * 測試同時使用jpa和jdbc保存數據，看是否能在一個事物中
+	 * 測試同時使用jpa和jdbc保存數據，看是否能在一個事务中
 	 */
 	@Test
 	public void testJpaAndJdbcSaveDataIntercurrent(){
