@@ -20,6 +20,7 @@
 		<module>mallen-JquerySendObject</module>
 		<module>mallen-jdk8newfeature</module>
 		<module>mallen-transChinese2En</module>
+		<module>mallen-hibernate</module>
 	</modules>
 	<properties>
 		<struts2.version>2.3.16</struts2.version>
@@ -27,7 +28,7 @@
 		<mysql-connector-java.version>5.1.21</mysql-connector-java.version>
 		<oracle-connetor-java.version>10.2.0.1.0</oracle-connetor-java.version>
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
-		<hibernate.version>4.2.0.SP1</hibernate.version>
+		<hibernate.version>4.3.5.Final</hibernate.version>
 		<spring-data-jpa.version>1.5.0.RELEASE</spring-data-jpa.version>
 		<junit.version>4.11</junit.version>
 		<servlet-api.version>3.0-alpha-1</servlet-api.version>
