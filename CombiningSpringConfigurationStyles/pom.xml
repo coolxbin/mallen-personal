@@ -6,25 +6,21 @@
 		<artifactId>mallen-personal</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>mallen-log4j-commonlogging</artifactId>
+	<artifactId>CombiningSpringConfigurationStyles</artifactId>
+	<packaging>war</packaging>
 	<dependencies>
+		<!-- springframework -->
 		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
 		</dependency>
-<!-- 		<dependency>
-			<groupId>com.taiji.common</groupId>
-			<artifactId>eav</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
 		</dependency>
- -->
 	</dependencies>
 </project>
