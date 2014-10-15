@@ -12,6 +12,11 @@ import com.huangzb.test.jpa.model.Email;
 import com.huangzb.test.jpa.model.Phone;
 import com.huangzb.test.jpa.model.User;
 
+/**
+ * 测试jpa的一个表保存两个model的问题
+ * @author mallen
+ *
+ */
 public class JpaDiscriminatorTest extends AbstractTestCase{
 	@PersistenceContext
 	private EntityManager em;
