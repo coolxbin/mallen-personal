@@ -26,6 +26,7 @@
 		<module>mallen-comet</module>
 		<module>mallen-angularjs</module>
 		<module>mallen-designpatterns</module>
+		<module>mallen-database-h2</module>
 	</modules>
 	<properties>
 		<struts2.version>2.3.16</struts2.version>
