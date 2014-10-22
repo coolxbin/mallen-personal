@@ -1,0 +1,1 @@
+create table user(id varchar2 primary key, name varchar2)
