@@ -5,7 +5,7 @@ import org.apache.commons.logging.LogFactory;
 import org.junit.Test;
 
 public class CommonsLoggingLog4jTest {
-	private   static  Log log  =  LogFactory.getLog("com.huangzb");   
+	private   static  Log log  =  LogFactory.getLog(CommonsLoggingLog4jTest.class);   
 
 	@Test
 	public void test() {

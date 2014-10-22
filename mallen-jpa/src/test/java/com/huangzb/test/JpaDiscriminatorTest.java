@@ -1,6 +1,7 @@
 package com.huangzb.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -8,8 +9,6 @@ import javax.persistence.Query;
 
 import org.junit.Test;
 
-import com.huangzb.test.jpa.model.Email;
-import com.huangzb.test.jpa.model.Phone;
 import com.huangzb.test.jpa.model.User;
 
 /**
