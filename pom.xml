@@ -24,6 +24,8 @@
 		<module>mallen-jpa</module>
 		<module>mallen-dbunit</module>
 		<module>mallen-comet</module>
+		<module>mallen-angularjs</module>
+		<module>mallen-designpatterns</module>
 	</modules>
 	<properties>
 		<struts2.version>2.3.16</struts2.version>
