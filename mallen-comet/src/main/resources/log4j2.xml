@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+#   The five logging levels used by Log are (in order):
+#
+#   1. DEBUG (the least serious)
+#   2. INFO
+#   3. WARN
+#   4. ERROR
+#   5. FATAL (the most serious) 
+-->
+<configuration status="WARN">
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} : %n%msg%n" />
+		</Console>
+	</appenders>
+	<loggers>
+		<root level="WARN">
+			<appender-ref ref="Console" />
+		</root>
+		<logger name="com.huangzb.test.comet" level="DEBUG" additivity="false">
+			<appender-ref ref="Console" />
+		</logger>
+		<logger name="org.cometd" level="WARN" additivity="false">
+			<appender-ref ref="Console" />
+		</logger>
+	</loggers>
+</configuration>
