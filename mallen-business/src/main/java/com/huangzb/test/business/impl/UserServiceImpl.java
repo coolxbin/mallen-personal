@@ -15,14 +15,27 @@ public class UserServiceImpl implements IUserService {
 	private IUserDao userDaoJpa;
 	@Resource
 	private IUserDao userDaoJdbc;
-	
+
 	public String getUserDesc() {
 		return "welcome to use user service!";
 	}
 
-	@Transactional(rollbackFor=Exception.class)
-	public void saveUserWithJpaAndJdbc(User user){
+	@Transactional(rollbackFor = Exception.class)
+	public void saveUserWithJpaAndJdbc(User user) {
 		userDaoJdbc.add(user);
 		userDaoJpa.add(user);
+	}
+
+	@Transactional(rollbackFor = Exception.class)
+	public void testTransaction() throws Exception {
+		try{
+		User user = new User();
+		user.setName("1");
+		userDaoJpa.add(user);
+		throw new Exception();
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+		// 使用了try...catch之后，数据就能保存了，说明限制了事务
 	}
 }

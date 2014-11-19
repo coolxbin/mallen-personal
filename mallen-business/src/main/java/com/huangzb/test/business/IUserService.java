@@ -6,4 +6,6 @@ public interface IUserService {
 	public String getUserDesc();
 	
 	public void saveUserWithJpaAndJdbc(User user);
+	
+	public void testTransaction() throws Exception;
 }

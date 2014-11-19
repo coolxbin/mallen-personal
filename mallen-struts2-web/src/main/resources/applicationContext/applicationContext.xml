@@ -33,7 +33,7 @@
 		<property name="packagesToScan">
 			<array>
 				<!-- 自动扫描model的类路劲 -->
-				<value>com.taiji.wangan.zhdd.model</value>
+				<value>com.huangzb.test.model</value>
 			</array>
 		</property>
 		<property name="jpaVendorAdapter">

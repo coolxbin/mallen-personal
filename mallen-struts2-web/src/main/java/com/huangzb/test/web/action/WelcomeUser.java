@@ -2,6 +2,9 @@ package com.huangzb.test.web.action;
 
 import javax.annotation.Resource;
 
+import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.Result;
+
 import com.huangzb.test.business.IUserService;
 import com.opensymphony.xwork2.ActionSupport;
 /**
@@ -36,7 +39,7 @@ public class WelcomeUser extends ActionSupport {
 		message = "Welcome " + userName;
 		return SUCCESS;
 	}
-
+	
 	public String getUserName() {
 		return userName;
 	}
