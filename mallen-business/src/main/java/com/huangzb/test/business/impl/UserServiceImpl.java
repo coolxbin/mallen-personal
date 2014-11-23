@@ -17,7 +17,7 @@ public class UserServiceImpl implements IUserService {
 	private IUserDao userDaoJdbc;
 
 	public String getUserDesc() {
-		return "welcome to use user service!";
+		return "welcome to use user service! ";
 	}
 
 	@Transactional(rollbackFor = Exception.class)
